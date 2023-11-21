@@ -1,4 +1,4 @@
-package com.gianneves.fakeapius.infra;
+package com.gianneves.fakeapius.infra.client;
 
 import com.gianneves.fakeapius.apiv1.dto.ProductDTO;
 import org.springframework.cloud.openfeign.FeignClient;

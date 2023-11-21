@@ -1,7 +1,7 @@
 package com.gianneves.fakeapius.business;
 
 import com.gianneves.fakeapius.apiv1.dto.ProductDTO;
-import com.gianneves.fakeapius.infra.FakeApiClient;
+import com.gianneves.fakeapius.infra.client.FakeApiClient;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
