@@ -5,18 +5,16 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 @Entity(name = "ProductEntity")
 @Table(name = "products")
 @Getter
 @Setter
-@RequiredArgsConstructor
+
 @Builder
 public class ProductEntity {
 
@@ -24,14 +22,18 @@ public class ProductEntity {
     @Column(name = "id")
     private String id;
 
-    @JsonProperty(value = "title")
+    @Column(name = "title", length = 800)
     private String name;
-    @JsonProperty(value = "price")
+    @Column(name = "price")
     private BigDecimal price;
-    @JsonProperty(value = "category")
+    @Column(name = "category", length = 800)
     private String category;
-    @JsonProperty(value = "description")
+    @Column(name = "description", length = 800)
     private String description;
-    @JsonProperty(value = "image")
+    @Column(name = "image", length = 800)
     private String image;
+    @Column(name = "inclusion_date")
+    private LocalDateTime inclusionDate;
+    @Column(name = "update_date")
+    private LocalDateTime updateDate;
 }
